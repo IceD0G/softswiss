@@ -1,0 +1,153 @@
+@import 'variables';
+
+.header__background{
+  background-color: $black;
+  position: relative;
+  z-index: 20;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  &__logo{
+    color: $pink;
+    z-index: 10;
+  }
+  @media screen and (max-width: 360px) {
+    &__nav{
+      display: none;
+    }
+    .burger__nav{
+      padding: $sm;
+      display: flex;
+      position: fixed;
+      top:-999px;
+      left:0;
+      height: 100vh;
+      width: 100vw;
+      background: $black;
+      transition: all ease-in-out 0.3s;
+      .header__links{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+        .header__link{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .open{
+    top:80px;
+  }
+  &__links{
+    column-gap: 27px;
+  }
+  &__link{
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+  }
+  &__link:hover{
+    background: linear-gradient(98.25deg, $light-yellow 18.56%, $pink 76.02%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .cart{
+    opacity: 1;
+    cursor: pointer;
+    &__gradient{
+      &-start{
+        stop-color: $white
+      }
+      &-stop{
+        stop-color: $white;
+      }
+    }
+    &:hover{
+      opacity: 0.6;
+    }
+    &:hover .cart__gradient-start{
+      stop-color: $light-yellow
+    }
+    &:hover .cart__gradient-stop{
+      stop-color: $pink
+    }
+  }
+  &__burger-open{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .burger__nav{
+      .header__links{
+        display: flex;
+        row-gap: 20px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+.burger-btn{
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+  &__line{
+    width: 100%;
+    height: 1.5px;
+    background: $white;
+    display: block;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      background: $white;
+      height: 1.5px;
+      position: absolute;
+      top: -8px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      background: $white;
+      height: 1.5px;
+      position: absolute;
+      top: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+    &-open{
+      height: 0;
+      &:before{
+        top:0;
+        transform: rotate(-45deg);
+      }
+      &:after{
+        top:0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .header__background{
+    position: sticky;
+    top: 0;
+  }
+  .burger-btn{
+    display: block;
+
+    &-open{
+
+    }
+  }
+}

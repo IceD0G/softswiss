@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+.description{
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+  h3{
+    margin-top: 50px;
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 800;
+    color: $white;
+  }
+  p{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #aab2c3;
+  }
+  a{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $light-yellow;
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 768px){
+    h3{
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+    p{
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+    a{
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+  @media screen and (max-width: 360px){
+    h3{
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+    a{
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+}

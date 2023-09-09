@@ -1,0 +1,78 @@
+@import 'variables';
+@import "header";
+@import "main-block";
+@import "offers";
+@import "description";
+@import "footer";
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button{
+  background: unset;
+  color: unset;
+  writing-mode: unset;
+  border: unset;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  display: flex;
+  li{
+    list-style: none;
+  }
+}
+
+body{
+  font-family: $lato-bold;
+  font-weight: 700;
+  background: rgb(13,30,72);
+  background: linear-gradient(192deg, rgba(13,30,72,1) 0%, rgba(48,69,113,1) 100%);
+}
+.container{
+  padding: $lg;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container{
+    padding: $md;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container{
+    padding: $sm;
+  }
+}
+
+.btn-primary{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  border-radius: 100px;
+  padding: 7px 40px;
+  background: $light-yellow;
+  color: $black;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+@media screen and (min-width: 360px) {
+  .btn-primary{
+    padding: 14px 40px;
+  }
+}
+.btn-secondary{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  border-radius: 100px;
+  border: 2px solid $light-yellow;
+  color: $light-yellow;
+  padding: 7px 40px;
+  &:hover{
+    opacity: 0.5;
+  }
+}
