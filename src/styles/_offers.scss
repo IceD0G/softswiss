@@ -67,7 +67,7 @@
       color: white;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $media-md) {
     &{
       row-gap: 30px;
       &__grid{
@@ -104,7 +104,7 @@
       }
     }
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: $media-sm) {
     &__grid{
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }

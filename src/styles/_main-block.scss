@@ -37,7 +37,7 @@
         color:$light-yellow
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $media-md) {
       h1{
         font-size: 36px;
         font-weight: 800;
@@ -71,7 +71,7 @@
     right: 0;
     display: flex;
     object-fit: contain;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $media-md) {
       right: -15%;
     }
     @media screen and (max-width: 360px) {
@@ -81,7 +81,7 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $media-md) {
   .main-block{
     height: 420px;
   }
